@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "271128779748",
+    "firebase_url": "https://ud843-quakereport-starti-d2ec6.firebaseio.com",
+    "project_id": "ud843-quakereport-starti-d2ec6",
+    "storage_bucket": "ud843-quakereport-starti-d2ec6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:271128779748:android:d90a42a29aa44572f445f1",
+        "android_client_info": {
+          "package_name": "com.example.android.quakereport"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "271128779748-mc7rgfb8e7cagkap1arsmt3lbaeb8vso.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.quakereport",
+            "certificate_hash": "32c6e3183200e9bad57229ea3a7761d25723d78c"
+          }
+        },
+        {
+          "client_id": "271128779748-fmken984i726q9an930dsb96pskkgjis.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA19qwYX1iv3ekUF2fLZhKRVr6YvkQc6Hw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "271128779748-fmken984i726q9an930dsb96pskkgjis.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
