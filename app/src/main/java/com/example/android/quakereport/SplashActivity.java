@@ -17,16 +17,17 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
+        startActivity(new Intent(this , MainActivity.class));
+        finish();
 
-
-        new Handler().postDelayed(new Runnable() {
+        /*new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 Intent intent = new Intent(SplashActivity.this , EarthquakeActivity.class);
                 startActivity(intent);
                 finish();
             }
-        }, 5000);
+        }, 5000);*/
     }
 
 }

@@ -28,6 +28,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -45,21 +46,14 @@ public class EarthquakeActivity extends FragmentActivity
 
     private static final String LOG_TAG = EarthquakeActivity.class.getName();
 
-    /**
-     * URL for earthquake data from the USGS dataset
-     */
+    private String USGS_REQUEST_URL = "https://newsapi.org/v2/top-headlines?country=in&apiKey=2af5a6f18eca4769bec23c2657068fd1";
 
-    private static final String USGS_REQUEST_URL =
-            "https://newsapi.org/v2/top-headlines?country=in&apiKey=2af5a6f18eca4769bec23c2657068fd1";
-    /**
-     * Constant value for the earthquake loader ID. We can choose any integer.
-     * This really only comes into play if you're using multiple loaders.
-     */
+    private String baseUrl = "https://newsapi.org/v2/everything?q=";
+    private String parameterUrl = "";
+    private String apikeyUrl = "&apiKey=2af5a6f18eca4769bec23c2657068fd1";
+
     private static final int EARTHQUAKE_LOADER_ID = 1;
 
-    /**
-     * Adapter for the list of earthquakes
-     */
     private TextView mEmptyStateTextView;
 
     public EarthquakeAdapter mAdapter;
@@ -75,6 +69,12 @@ public class EarthquakeActivity extends FragmentActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.earthquake_activity);
 
+        try{
+            parameterUrl = getIntent().getStringExtra("PARAMETER_URL");
+        } catch (Exception e){
+            Log.v("EarthquakeActivity", e.getMessage());
+        }
+        USGS_REQUEST_URL = baseUrl+parameterUrl+apikeyUrl;
         earth = new ArrayList<>();
         // Find a reference to the {@link ListView} in the layout
         earthquakeListView = findViewById(R.id.verticleViewPager);
@@ -145,6 +145,7 @@ public class EarthquakeActivity extends FragmentActivity
 
 
         Uri baseUri = Uri.parse(USGS_REQUEST_URL);
+        Log.v("CreateLoaderParseUrl", USGS_REQUEST_URL);
         Uri.Builder uriBuilder = baseUri.buildUpon();
 
 

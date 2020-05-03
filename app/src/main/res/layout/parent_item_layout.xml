@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="150dp">
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:text="Title"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/child_rv"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"/>
+
+</android.support.v7.widget.CardView>
