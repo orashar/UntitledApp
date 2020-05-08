@@ -19,5 +19,14 @@
         android:layout_marginTop="140dp"
         android:gravity="center" />
 
+    <Button
+        android:id="@+id/vip_btn"
+        android:text="VIP Access"
+        android:layout_gravity="bottom"
+        android:background="@color/colorAccent"
+        android:layout_margin="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
 
 </LinearLayout>

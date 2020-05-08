@@ -36,6 +36,16 @@ public class LoginActivity extends AppCompatActivity {
         SignInButton signInButton = findViewById(R.id.sign_in_button);
         signInButton.setSize(SignInButton.SIZE_WIDE);
 
+        findViewById(R.id.vip_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(LoginActivity.this ,"Logged in as Developer", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(LoginActivity.this, CurrentLocation.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
 
      // Build a GoogleSignInClient with the options specified by gso.
 
@@ -91,7 +101,7 @@ public class LoginActivity extends AppCompatActivity {
         } catch (ApiException e) {
             // The ApiException status code indicates the detailed failure reason.
             // Please refer to the GoogleSignInStatusCodes class reference for more information.
-            Toast.makeText(LoginActivity.this , e.getStatusCode() , Toast.LENGTH_LONG).show();
+            Toast.makeText(LoginActivity.this , e.getMessage() , Toast.LENGTH_LONG).show();
         }
     }
 
@@ -102,7 +112,7 @@ public class LoginActivity extends AppCompatActivity {
 
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
         if (account != null) {
-            Toast.makeText(LoginActivity.this ,"Welcome " + account.getDisplayName(), Toast.LENGTH_LONG).show();
+            Toast.makeText(LoginActivity.this ,"Logged in as "+account.getEmail(), Toast.LENGTH_LONG).show();
             Intent intent = new Intent(this, CurrentLocation.class);
             startActivity(intent);
             finish();
