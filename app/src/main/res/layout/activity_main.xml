@@ -8,14 +8,21 @@
 
     <LinearLayout
         android:id="@+id/weather_ll"
-        android:layout_above="@id/parent_rv"
         android:layout_alignParentTop="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="100dp">
+
+        <TextView
+            android:text="Add weather info here"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/parent_rv"
-        android:layout_marginTop="100dp"
+        android:layout_below="@id/weather_ll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 

@@ -40,7 +40,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(LoginActivity.this ,"Logged in as Developer", Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(LoginActivity.this, CurrentLocation.class);
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }
