@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -13,20 +13,19 @@
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/sign_in_button"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/vip_btn"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="110dp"
-        android:layout_marginTop="140dp"
-        android:gravity="center" />
+        android:layout_height="wrap_content"/>
 
     <Button
         android:id="@+id/vip_btn"
         android:text="VIP Access"
-        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
         android:background="@color/colorAccent"
         android:layout_margin="24dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
 
-</LinearLayout>
+</RelativeLayout>
